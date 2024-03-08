@@ -9,6 +9,12 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 
 ## Recursos
 
+- Arduino FreeRTOS
+    - [Arduino FreeRTOS](https://feilipu.me/2015/11/24/arduino_freertos/)
+    - [Arduino FreeRTOS Library](https://github.com/feilipu/Arduino_FreeRTOS_Library)
+    - [AVR ATmega port of freeRTOS](https://github.com/feilipu/avrfreertos)
+    - [Phillip Stevens's Projects on Hackster.io](https://www.hackster.io/feilipu/projects)
+
 - Introducción a RTOS
     - [Part 1: What is a Real-Time Operating System (RTOS)?](https://www.digikey.com/en/maker/projects/what-is-a-realtime-operating-system-rtos/28d8087f53844decafa5000d89608016)
     - [Part 2: FreeRTOS](https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-2-freertos/b3f84c9c9455439ca2dcb8ccfce9dec5)
@@ -23,7 +29,7 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Part 11: Priority Inversion](https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-11-priority-inversion/abf4b8f7cd4a4c70bece35678d178321)
     - [Part 12: Multicore Systems](https://www.digikey.com/en/maker/projects/introduction-to-rtos-solution-to-part-12-multicore-systems/369936f5671d4207a2c954c0637e7d50)
 
-- Vídeos
+- Introducción a RTOS (Vídeos)
     - [Introduction to RTOS Part 1 - What is a Real-Time Operating System (RTOS)?](https://youtu.be/F321087yYy4?si=Jv4AU2lzRQuS7cqF)
     - [Introduction to RTOS Part 2 - Getting Started with FreeRTOS](https://youtu.be/JIr7Xm_riRs?si=E-_WyxjYfESnBRAg)
     - [Introduction to RTOS Part 3 - Task Scheduling](https://youtu.be/95yUbClyf3E?si=Fkijsk15KdK31M_N)
