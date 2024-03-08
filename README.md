@@ -4,6 +4,7 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 
 ## Contenidos del repositorio
 
+- `Arduino FreeRTOS` Fork de la biblioteca FreeRTOS de Phillip Stevens para dispositivos Arduino basados en AVR
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
 
