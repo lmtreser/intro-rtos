@@ -4,11 +4,21 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 
 ## Contenidos del repositorio
 
-- `arduino-freertos` Fork de la biblioteca Arduino FreeRTOS de Phillip Stevens para dispositivos basados en AVR
+- `arduino-freertos` Fork de la biblioteca Arduino FreeRTOS de Phillip Stevens para dispositivos AVR
+- `arduino-avanzado` Tutoriales avanzados de [Luis Llamas](https://www.luisllamas.es/)
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
 
 ## Recursos
+
+- Arduino Avanzado
+    - [Aproximación a la multitarea en Arduino](https://www.luisllamas.es/multitarea-en-arduino-blink-sin-delay/)
+    - [Cómo usar FreeRTOS en Arduino](https://www.luisllamas.es/como-usar-freertos-en-arduino/)
+    - [Implementar una máquina de estados finitos en Arduino](https://www.luisllamas.es/maquina-de-estados-finitos-arduino/)
+    - [Implementar una red de Petri en Arduino](https://www.luisllamas.es/implementar-una-red-de-petri-en-arduino/)
+    - [Librería Arduino AsyncTask](https://www.luisllamas.es/libreria-arduino-asynctask/)
+    - [Librería de Arduino PetriNet](https://www.luisllamas.es/libreria-de-arduino-petrinet/)
+    - [Librería de Arduino StateMachine](https://www.luisllamas.es/libreria-arduino-statemachine/)
 
 - Arduino FreeRTOS
     - [Arduino FreeRTOS](https://feilipu.me/2015/11/24/arduino_freertos/)
@@ -79,6 +89,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Adding simple mutlicore support to FreeRTOS](https://www.freertos.org/2020/02/simple-multicore-core-to-core-communication-using-freertos-message-buffers.html)
 
 - Otros recursos
+    - [Librería de Arduino que permite ejecutar tareas de forma asincrona](https://github.com/luisllamasbinaburo/Arduino-AsyncTask)
+    - [Librería de Arduino que implementa una red de Petri](https://github.com/luisllamasbinaburo/Arduino-PetriNet)
+    - [Librería de Arduino que implementa una máquina de estados finita](https://github.com/luisllamasbinaburo/Arduino-StateMachine)
+    - [Repositorio Tutoriales Arduino de Luis Llamas](https://github.com/luisllamasbinaburo/tutoriales-arduino-luisllamas_es)
     - [ShawnHymel RTOS Repository](https://github.com/ShawnHymel/introduction-to-rtos)
     - [Zephyr Project](https://zephyrproject.org/)
 
