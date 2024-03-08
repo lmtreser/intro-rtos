@@ -4,9 +4,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 
 ## Contenidos del repositorio
 
-- `arduino-freertos` Fork de la biblioteca Arduino FreeRTOS de Phillip Stevens para dispositivos AVR
+- `arduino-freertos` Fork de la biblioteca [Arduino FreeRTOS](https://github.com/feilipu/Arduino_FreeRTOS_Library) de [Phillip Stevens](https://github.com/feilipu) para dispositivos AVR
 - `arduino-avanzado` Tutoriales avanzados de [Luis Llamas](https://www.luisllamas.es/)
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
+- `freertos-arduino-tutorials` Tutoriales de FreeRTOS aplicado a Arduino 
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
 
 ## Recursos
@@ -25,6 +26,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Arduino FreeRTOS Library](https://github.com/feilipu/Arduino_FreeRTOS_Library)
     - [AVR ATmega port of freeRTOS](https://github.com/feilipu/avrfreertos)
     - [Phillip Stevens's Projects on Hackster.io](https://www.hackster.io/feilipu/projects)
+
+- FreeRTOS Arduino Tutorials
+    - [FreeRTOS Arduino Tutorials](https://microcontrollerslab.com/category/freertos-arduino-tutorial/)
+    - [Arduino_FreeRTOS from Explore Embedded](https://github.com/ExploreEmbedded/Arduino_FreeRTOS/)
 
 - Introducción a RTOS
     - [Part 1: What is a Real-Time Operating System (RTOS)?](https://www.digikey.com/en/maker/projects/what-is-a-realtime-operating-system-rtos/28d8087f53844decafa5000d89608016)
