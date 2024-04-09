@@ -9,6 +9,7 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 - `arduino-protothreads` Ejecución de código lineal para sistemas controlados por eventos
 - `avr-simple-scheduler` Un programador de tareas realmente simple
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
+- `esp-os` Un simple SO para microcontroladores
 - `freertos-arduino-tutorials` Tutoriales de FreeRTOS aplicado a Arduino 
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
 
@@ -29,9 +30,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [AVR ATmega port of freeRTOS](https://github.com/feilipu/avrfreertos)
     - [Phillip Stevens's Projects on Hackster.io](https://www.hackster.io/feilipu/projects)
 
-- ProtoThreads
-    - [Protothreads for Arduino](https://gitlab.com/airbornemint/arduino-protothreads)
-    - [Protothreads](https://dunkels.com/adam/pt/)
+- ESP-OS
+    - [Esp-cf](https://github.com/Pepe-57/esp-cf)
+    - [Esp-os](https://github.com/Pepe-57/esp-os/)
+    - [Esp-os Commands](https://github.com/Pepe-57/esp-os/blob/main/commands.txt)
 
 - FreeRTOS Arduino Tutorials
     - [Arduino_FreeRTOS from Explore Embedded](https://github.com/ExploreEmbedded/Arduino_FreeRTOS/)
@@ -66,6 +68,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Introduction to RTOS Part 10 - Deadlock and Starvation](https://youtu.be/hRsWi4HIENc?si=cgFNCEjHxKBsVDuX)
     - [Introduction to RTOS Part 11 - Priority Inversion](https://youtu.be/C2xKhxROmhA?si=NsC6se5xdbtCFe3R)
     - [Introduction to RTOS Part 12 - Multicore Systems](https://youtu.be/LPSHUcH5aQc?si=IsP6jo5YPuwmVGQN)
+
+- ProtoThreads
+    - [Protothreads for Arduino](https://gitlab.com/airbornemint/arduino-protothreads)
+    - [Protothreads](https://dunkels.com/adam/pt/)
 
 - Lecturas Recomendadas
     - [FreeRTOS book and reference manual](https://www.freertos.org/Documentation/RTOS_book.html)
