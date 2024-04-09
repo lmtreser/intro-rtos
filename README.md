@@ -34,8 +34,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Protothreads](https://dunkels.com/adam/pt/)
 
 - FreeRTOS Arduino Tutorials
-    - [FreeRTOS Arduino Tutorials](https://microcontrollerslab.com/category/freertos-arduino-tutorial/)
     - [Arduino_FreeRTOS from Explore Embedded](https://github.com/ExploreEmbedded/Arduino_FreeRTOS/)
+    - [How to use FreeRTOS with Arduino](https://microcontrollerslab.com/use-freertos-arduino/)
+    - [FreeRTOS Arduino Tutorials](https://microcontrollerslab.com/category/freertos-arduino-tutorial/)
+    - [FreeRTOS Básico, proyecto en Wokwi](https://wokwi.com/projects/352968005017477121)
 
 - Introducción a RTOS
     - [Part 1: What is a Real-Time Operating System (RTOS)?](https://www.digikey.com/en/maker/projects/what-is-a-realtime-operating-system-rtos/28d8087f53844decafa5000d89608016)
