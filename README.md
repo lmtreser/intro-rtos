@@ -4,9 +4,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 
 ## Contenidos del repositorio
 
-- `arduino-freertos` Fork de la biblioteca [Arduino FreeRTOS](https://github.com/feilipu/Arduino_FreeRTOS_Library) de [Phillip Stevens](https://github.com/feilipu) para dispositivos AVR
 - `arduino-avanzado` Tutoriales avanzados de [Luis Llamas](https://www.luisllamas.es/)
-- `avr-simple-scheduler` Un programador de tareas realmente simple.
+- `arduino-freertos` Fork de la biblioteca [Arduino FreeRTOS](https://github.com/feilipu/Arduino_FreeRTOS_Library) de [Phillip Stevens](https://github.com/feilipu) para dispositivos AVR
+- `arduino-protothreads` Ejecución de código lineal para sistemas controlados por eventos
+- `avr-simple-scheduler` Un programador de tareas realmente simple
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
 - `freertos-arduino-tutorials` Tutoriales de FreeRTOS aplicado a Arduino 
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
@@ -27,6 +28,10 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Arduino FreeRTOS Library](https://github.com/feilipu/Arduino_FreeRTOS_Library)
     - [AVR ATmega port of freeRTOS](https://github.com/feilipu/avrfreertos)
     - [Phillip Stevens's Projects on Hackster.io](https://www.hackster.io/feilipu/projects)
+
+- ProtoThreads
+    - [Protothreads for Arduino](https://gitlab.com/airbornemint/arduino-protothreads)
+    - [Protothreads](https://dunkels.com/adam/pt/)
 
 - FreeRTOS Arduino Tutorials
     - [FreeRTOS Arduino Tutorials](https://microcontrollerslab.com/category/freertos-arduino-tutorial/)
