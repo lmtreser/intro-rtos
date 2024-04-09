@@ -12,6 +12,7 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 - `esp-os` Un simple SO para microcontroladores
 - `freertos-arduino-tutorials` Tutoriales de FreeRTOS aplicado a Arduino 
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
+- `python` Recursos para trabajar con Python y MicroPython
 
 ## Recursos
 
@@ -72,6 +73,12 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 - ProtoThreads
     - [Protothreads for Arduino](https://gitlab.com/airbornemint/arduino-protothreads)
     - [Protothreads](https://dunkels.com/adam/pt/)
+
+- Python
+    - [Python](https://www.python.org/)
+    - [MicroPython](https://micropython.org/)
+    - [Thonny Python IDE for beginners](https://thonny.org/)
+    - [Multi-thread coding on the Raspberry Pi Pico in MicroPython/](https://bytesnbits.co.uk/multi-thread-coding-on-the-raspberry-pi-pico-in-micropython/)
 
 - Lecturas Recomendadas
     - [FreeRTOS book and reference manual](https://www.freertos.org/Documentation/RTOS_book.html)
