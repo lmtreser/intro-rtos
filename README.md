@@ -6,6 +6,7 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 
 - `arduino-freertos` Fork de la biblioteca [Arduino FreeRTOS](https://github.com/feilipu/Arduino_FreeRTOS_Library) de [Phillip Stevens](https://github.com/feilipu) para dispositivos AVR
 - `arduino-avanzado` Tutoriales avanzados de [Luis Llamas](https://www.luisllamas.es/)
+- `avr-simple-scheduler` Un programador de tareas realmente simple.
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
 - `freertos-arduino-tutorials` Tutoriales de FreeRTOS aplicado a Arduino 
 - `introduction-to-rtos` Fork de [Introduction to RTOS](https://github.com/ShawnHymel/introduction-to-rtos) by [Shawn Hymel](https://github.com/ShawnHymel)
@@ -94,6 +95,8 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
     - [Adding simple mutlicore support to FreeRTOS](https://www.freertos.org/2020/02/simple-multicore-core-to-core-communication-using-freertos-message-buffers.html)
 
 - Otros recursos
+    - [avr-simple-scheduler](https://github.com/ferenc-nemeth/avr-simple-scheduler)
+    - [Prevent ATMega328P crashes with a stack monitor](https://www.eventuallabs.com/blog/avr_stack_monitor/)
     - [Librería de Arduino que permite ejecutar tareas de forma asincrona](https://github.com/luisllamasbinaburo/Arduino-AsyncTask)
     - [Librería de Arduino que implementa una red de Petri](https://github.com/luisllamasbinaburo/Arduino-PetriNet)
     - [Librería de Arduino que implementa una máquina de estados finita](https://github.com/luisllamasbinaburo/Arduino-StateMachine)
