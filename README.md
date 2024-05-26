@@ -8,6 +8,7 @@ Introducción, con tintes educativos, a RTOS y su aplicación con el ecosistema 
 - `arduino-freertos` Fork de la biblioteca [Arduino FreeRTOS](https://github.com/feilipu/Arduino_FreeRTOS_Library) de [Phillip Stevens](https://github.com/feilipu) para dispositivos AVR
 - `arduino-protothreads` Ejecución de código lineal para sistemas controlados por eventos
 - `avr-simple-scheduler` Un programador de tareas realmente simple
+- `c_cpp` Recursos para trabajar con C y C++
 - `docs` Documentos varios sobre RTOS y sus aplicaciones
 - `esp-os` Un simple SO para microcontroladores
 - `freertos-arduino-tutorials` Tutoriales de FreeRTOS aplicado a Arduino 
