@@ -1,8 +1,6 @@
 # Un poco de Bash
 
-> Sobre el trabajo de Nicolás Wolovick, *Lab2: Un Baash* [0].
-
-**GNU Bash** [1] o simplemente **Bash (Bourne-again shell)** es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting. Bash fue originalmente escrito por Brian Fox para el sistema operativo GNU, y pretendía ser el reemplazo de software libre del shell Bourne. Lanzado por primera vez en 1989, se ha utilizado ampliamente como el intérprete de inicio de sesión (login) predeterminado para la mayoría de las distribuciones de GNU/Linux, y también de Mac OS X de Apple hasta la versión 10.15. Una versión también está disponible para Windows 10 y Android. También es el intérprete de órdenes de usuario predeterminado en Solaris 11.
+> Sobre el trabajo de Nicolás Wolovick, *Lab2: Un Baash* [1].
 
 1. Introducción
 2. Operación Básica
@@ -14,15 +12,33 @@
 
 ## Introducción
 
+**GNU Bash** [2] o simplemente **Bash (Bourne-again shell)** es una interfaz de usuario de línea de comandos popular, específicamente un shell de Unix; así como un lenguaje de scripting. Bash fue originalmente escrito por Brian Fox para el sistema operativo GNU, y pretendía ser el reemplazo de software libre del shell Bourne. Lanzado por primera vez en 1989, se ha utilizado ampliamente como el intérprete de inicio de sesión (login) predeterminado para la mayoría de las distribuciones de GNU/Linux, y también de Mac OS X de Apple hasta la versión 10.15. Una versión también está disponible para Windows 10 y Android. También es el intérprete de órdenes de usuario predeterminado en Solaris 11.
+
 La interfaz más tradicional de un sistema operativo **UNIX-like** (*NIX) es el intérprete de línea de comandos. Este programa, que ejecuta en modo usuario, funciona en cualquier *NIX que soporte interface de caracteres y su función es aceptar comandos ingresados por entrada estandar (teclado), parsearlos, ejecutar la órden y mostrar el resultado en salida estandar (pantalla), para luego volver a repetir el proceso.
 
-Por defecto UNIX ejecuta un proceso shell cada vez que un usuario interactivo ingresa al sistema. Aunque esto puede ser configurado de otra manera (ver el último campo de cada línea del archivo `/etc/passwd`), en la mayoría de los casos luego de ingresar nuestro nombre de usuario y contraseña, el proceso que maneja el ingreso de usuarios genera un proceso hijo que ejecuta un shell, con el *uid/gid* (identificador de usuario y grupo) correspondiente al usuario. En este momento la pantalla se suele presentar de la siguiente manera: 
+Los usos más comunes de Bash son [3]:
+
+**Interacción directa con el sistema operativo.** Los usuarios pueden ejecutar comandos, manipular archivos y directorios, gestionar procesos y realizar tareas administrativas directamente desde la línea de comandos.
+
+- Navegar por el sistema de archivos (`cd`, `ls`, `pwd`).
+- Manipular archivos (`cp`, `mv`, `rm`, `touch`).
+- Administrar procesos (`ps`, `kill`, `top`).
+
+**Automatizar tareas repetitivas.** Mediante scripts que se pueden programar para ejecutarse automáticamente en momentos específicos utilizando herramientas como `cron` y `at`, es posible realizar copias de seguridad, limpieza periódica de archivos temporales, actualizar el sistema.
+
+**Administración de sistemas.** En algunos entornos, Bash permite el despliegue de aplicaciones en varios servidores, monitorización de uso de disco y memoria, y gestión de cuentas de usuarios.
+
+**Desarrollo de software.** También es utilizado por desarrolladores de software para crear scripts de construcción y despliegue, automatizar pruebas y gestionar entornos de desarrollo. Es una herramienta esencial en el desarrollo ágil y la integración continua.
+
+**Procesamiento de datos.** Además, es una herramienta eficaz para el procesamiento y análisis de datos, especialmente cuando se combina con otras utilidades como `grep`, `awk`, `sed` y `sort`. Los scripts de Bash pueden manipular grandes volúmenes de datos de manera eficiente para: la extracción y transformación de datos, el análisis de logs y generación de reportes, y la automatización de flujos de trabajo de datos.
+
+Por defecto UNIX ejecuta un proceso shell cada vez que un usuario interactivo ingresa al sistema. Aunque esto puede ser configurado de otra manera (ver el último campo de cada línea del archivo `/etc/passwd`), en la mayoría de los casos luego de ingresar nuestro nombre de usuario y contraseña, el proceso que maneja el ingreso de usuarios genera un proceso hijo que ejecuta un shell, con el *uid/gid* (identificador de usuario y grupo) correspondiente al usuario. En este momento la pantalla se suele presentar de la siguiente manera:
 
 ```bash
 usuario@host:~$ 
 ```
 
-Después de este texto inicial llamado *prompt*, que contiene información de entorno como por ejemplo el nombre del usuario, el nombre del host y el último tramo del directorio corriente, el shell espera datos a través de la `stdin` que normalmente se asocia al dispositivo teclado. Podemos escribir el comando que deseamos que el shell ejecute, e iniciar la ejecución ingresando el caracter NEWLINE `'\n'` generalmente asociado con la tecla Enter o Return. 
+Después de este texto inicial llamado *prompt*, que contiene información de entorno como por ejemplo el nombre del usuario, el nombre del host y el último tramo del directorio corriente, el shell espera datos a través de la `stdin` que normalmente se asocia al dispositivo teclado. Podemos escribir el comando que deseamos que el shell ejecute, e iniciar la ejecución ingresando el caracter NEWLINE `'\n'` generalmente asociado con la tecla Enter o Return.
 
 ```bash
 usuario@host:~$ sleep 10 
@@ -53,7 +69,7 @@ Cuando el comando comienza con `/`, este se toma como un camino absoluto dentro 
 
 Otro mecanismo entra en juego cuando el comando no comienza con un delimitador de camino absoluto o relativo. La variable de entorno `PATH`, que puede ser leida con el comando `env` o con `echo $PATH`, sirve de secuencia de caminos absolutos o relativos, separados por *':'* que serán prefijados a commando hasta encontrar un archivo que pueda ser leído y ejecutado.
 
-Usemos el archivo ejecutable `/bin/date` [2] que nos proporciona la fecha y hora del sistema para ejemplificar los mecanismos de camino absoluto, relativo y secuencia `PATH`.
+Usemos el archivo ejecutable `/bin/date` [4] que nos proporciona la fecha y hora del sistema para ejemplificar los mecanismos de camino absoluto, relativo y secuencia `PATH`.
 
 ```bash
 usuario@host:~$ /bin/date
@@ -86,7 +102,7 @@ En el paradigma básico para ejecutar un comando, el shell es el proceso padre q
 La semántica puede ser cambiada para que el padre **no espere la terminación del hijo**, si le agregamos al final el símbolo `&`.
 Este operador, que puede ser pensado como operador de *composición paralela*, crea la posibilidad de ejecutar procesos de manera concurrente, es decir, si el comando que ejecutamos termina con `&` y demora un tiempo relativamente largo, todo lo que iniciemos desde el shell y el shell mismo estarán ejecutándose al mismo tiempo (paralelamente, concurrentemente).
 
-Esta característica resulta muy útil cuando el kernel esta corriendo sobre un motherboard SMP (symmetric multiprocessing) [3], que soporta varios microprocesadores compartiendo una única imagen de memoria principal. Si tenemos un par de programas que tardan mucho en calcular decimales de *pi* o de *e*, podemos ponerlos a correr de manera que cada uno ocupe un microprocesador, mientras utilizamos un poco de los dos micros para jugar.
+Esta característica resulta muy útil cuando el kernel esta corriendo sobre un motherboard SMP (symmetric multiprocessing) [5], que soporta varios microprocesadores compartiendo una única imagen de memoria principal. Si tenemos un par de programas que tardan mucho en calcular decimales de *pi* o de *e*, podemos ponerlos a correr de manera que cada uno ocupe un microprocesador, mientras utilizamos un poco de los dos micros para jugar.
 
 ```bash
 usuario@host:~/calculosLargos$ ./decimalesPi salidaPi.txt &
@@ -94,7 +110,7 @@ usuario@host:~/calculosLargos$ ./decimalesE salidaE.txt &
 usuario@host:~/calculosLargos$ freeciv 
 ```
 
-Existe un problema con los procesos hijos en *background*, la entrada y salida estandar se comparten entre todos, con lo cual tendremos salidas de pantalla entrelazadas y las entradas por teclado serán no-deterministicamente asignadas a alguno de los procesos que están corriendo. Este ejemplo nos muestra el lio que se puede armar. 
+Existe un problema con los procesos hijos en *background*, la entrada y salida estandar se comparten entre todos, con lo cual tendremos salidas de pantalla entrelazadas y las entradas por teclado serán no-deterministicamente asignadas a alguno de los procesos que están corriendo. Este ejemplo nos muestra el lio que se puede armar.
 
 ```bash
 usuario@host:~$ yes "HOLA" & yes "CHAU" &
@@ -106,7 +122,7 @@ usuario@host:~$ yes "HOLA" & yes "CHAU" &
 1. Investigue cuales son los comandos internos para manejo de procesos en *background* de `bash`.
 2. En el ejemplo de arriba el operador `&` funciona como **operador de composición paralela**. ¿Cuál es el operador de composición **secuencial** en Bourne shell?
 3. Investigue como `bash` forma el árbol de procesos cuando ejecutamos `cmd1 & cmd2 & cmd3 & ... & cmdN`. Piense la respuesta y luego utilice `pstree` para corroborarla.
-4. Indique cuantas letras `a` debería imprimir el siguiente programa. Generalice. 
+4. Indique cuantas letras `a` debería imprimir el siguiente programa.
 
 ```c
 fork();
@@ -128,7 +144,7 @@ Como ejemplo podemos recolectar estadísticas sobre un *header* del código fuen
 usuario@host:~$ wc < kernel.h > kernel.h.stats
 ```
 
-O si nuestros programas *cpu-bound* [4] generan sus resultados en pantalla podemos ejecutarlos concurrentemente y mantener sus salidas separadas, mientras las monitoreamos con el comando `tail`.
+O si nuestros programas *cpu-bound* [6] generan sus resultados en pantalla podemos ejecutarlos concurrentemente y mantener sus salidas separadas, mientras las monitoreamos con el comando `tail`.
 
 ```bash
 usuario@host:~$ forest3d -n 0.2 > n0.2.out &
@@ -159,7 +175,7 @@ juan@host:~$ grep bash /etc/passwd | cut -d ":" -f 1 | sort -r
 
 ```
 
-mientras que el siguiente es un poco más complicado y permite reestablecer interactivamente un *dump* de una partición *ext2* [5], que ha sido partido para sortear la limitación de 2GB de tamaño del sistema de archivos *ext2*.
+mientras que el siguiente es un poco más complicado y permite reestablecer interactivamente un *dump* de una partición *ext2* [7], que ha sido partido para sortear la limitación de 2GB de tamaño del sistema de archivos *ext2*.
 
 ```bash
 juan@host:~$ cat backupL0.gza? | gzip -dc | /sbin/restore -i -f -
@@ -174,12 +190,12 @@ juan@host:~$ cat backupL0.gza? | gzip -dc | /sbin/restore -i -f -
 4. Muestre el *uid* máximo en su sistema NIS (`ypcat passwd` realiza el trabajo básico).
 5. Muestre todos los login repetidos de su sistema NIS.
 
-
 ## Fuentes
 
-[0] Lab2: Un Baash [https://cs.famaf.unc.edu.ar/~nicolasw/Docencia/so2003/lab2.html](https://cs.famaf.unc.edu.ar/~nicolasw/Docencia/so2003/lab2.html)
-[1] Bash, Wikipedia [https://es.wikipedia.org/wiki/Bash](https://es.wikipedia.org/wiki/Bash)
-[2] date(1) — Linux manual page [https://man7.org/linux/man-pages/man1/date.1.html](https://man7.org/linux/man-pages/man1/date.1.html)
-[3] Multiprocesamiento simétrico, Wikipedia [https://es.wikipedia.org/wiki/Multiprocesamiento_sim%C3%A9trico](https://es.wikipedia.org/wiki/Multiprocesamiento_sim%C3%A9trico)
-[4] CPU-bound, Wikipedia [https://en.wikipedia.org/wiki/CPU-bound](https://en.wikipedia.org/wiki/CPU-bound)
-[5] Linux 6.9 Deprecates The EXT2 File-System Driver [https://www.phoronix.com/news/Linux-6.9-Deprecates-EXT2](https://www.phoronix.com/news/Linux-6.9-Deprecates-EXT2)
+[1] Lab2: Un Baash [https://cs.famaf.unc.edu.ar/~nicolasw/Docencia/so2003/lab2.html](https://cs.famaf.unc.edu.ar/~nicolasw/Docencia/so2003/lab2.html)
+[2] Bash, Wikipedia [https://es.wikipedia.org/wiki/Bash](https://es.wikipedia.org/wiki/Bash)
+[3] Introducción al Bash Scripting #1 [https://voidnull.es/introduccion-al-bash-scripting/](https://voidnull.es/introduccion-al-bash-scripting/)
+[4] date(1) — Linux manual page [https://man7.org/linux/man-pages/man1/date.1.html](https://man7.org/linux/man-pages/man1/date.1.html)
+[5] Multiprocesamiento simétrico, Wikipedia [https://es.wikipedia.org/wiki/Multiprocesamiento_sim%C3%A9trico](https://es.wikipedia.org/wiki/Multiprocesamiento_sim%C3%A9trico)
+[6] CPU-bound, Wikipedia [https://en.wikipedia.org/wiki/CPU-bound](https://en.wikipedia.org/wiki/CPU-bound)
+[7] Linux 6.9 Deprecates The EXT2 File-System Driver [https://www.phoronix.com/news/Linux-6.9-Deprecates-EXT2](https://www.phoronix.com/news/Linux-6.9-Deprecates-EXT2)
