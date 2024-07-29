@@ -71,7 +71,7 @@ echo "Hola, $nombre!"
 - Sintaxis básica: `if condición; then acciones; fi`
 
 ```bash
-if [ $mi_variable == "hola mundo" ]; then
+if [ "$mi_variable" == "hola mundo" ]; then
   echo "La variable es igual a 'hola mundo'"
 fi
 ```
