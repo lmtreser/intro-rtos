@@ -76,6 +76,35 @@ if [ "$mi_variable" == "hola mundo" ]; then
 fi
 ```
 
+### [ versus [[
+
+Hay 2 comandos que se usan a menudo en las declaraciones if: `[` y `[[`:
+
+`/usr/bin/[` También conocido como *test*, es un programa que devuelve `0` si la prueba que se le pasa tiene éxito.
+
+```bash
+if [ -e file.txt ]
+```
+
+`[[` Está integrado en bash. Permite realizar pruebas como `[[ -e x.txt && -e y.txt ]]` que no funcionarían con una herramienta de línea de comandos.
+
+```bash
+if [[ -e file.txt ]]
+```
+
+Ejemplos:
+
+- `if COMMAND` ¿*COMMAND* devolvió *0*?
+- `if ! COMMAND` ¿*COMMAND* **no** devolvió *0*?
+- `if [ -n "$var." ]` ¿*$var* no esta vacio?
+- `if [ -d somedir ]` ¿Existe *somedir*?
+- `if [ -e file.txt ]` ¿Existe *file.txt*?
+- `if [ -x script.sh ]` ¿*script.sh* es ejecutable?
+- `if true` *true* siempre devuelve *0* :)
+- `if [ -e archivo ] && [ -e archivo2 ]` combinar con *&&* y *||*
+
+Con `man [` se puede aprender más.
+
 ### Bucle for
 
 - Sintaxis básica: `for variable in lista; do acciones; done`
