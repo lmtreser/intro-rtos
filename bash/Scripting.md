@@ -76,6 +76,30 @@ if [ "$mi_variable" == "hola mundo" ]; then
 fi
 ```
 
+Estructura condicional if, else, y elif:
+
+```bash
+if [ condición1 ]; then
+    # Bloque de código si la condición1 es verdadera
+elif [ condición2 ]; then
+    # Bloque de código si la condición1 es falsa y la condición2 es verdadera
+else
+    # Bloque de código si todas las condiciones anteriores son falsas
+fi
+```
+
+```bash
+read -p "Introduce un número: " num
+
+if [ "$num" -lt 0 ]; then
+    echo "El número es negativo."
+elif [ "$num" -eq 0 ]; then
+    echo "El número es cero."
+else
+    echo "El número es positivo."
+fi
+```
+
 ### [ versus [[
 
 Hay 2 comandos que se usan a menudo en las declaraciones if: `[` y `[[`:
@@ -213,6 +237,14 @@ Fruta: naranja
 ```
 
 También se puede utilizar `for ((i=0; i<${#lista[@]}; i++)); do` para recorrer la lista utilizando un índice, donde `${#lista[@]}` devuelve el número de elementos en la lista:
+
+```bash
+# Definir un array
+frutas=("manzana" "banana" "naranja")
+
+# Obtener la longitud del primer elemento (manzana)
+echo "Longitud de 'manzana': ${#frutas[0]}"
+```
 
 ```bash
 frutas=(manzana banana naranja)
