@@ -161,7 +161,9 @@ done
 echo "Ingrese un color (rojo, verde, azul): "
 read color
 case $color in
-  rojo) echo "El color es rojo";;
+  rojo) echo "El color es rojo";
+        echo "Ejecuta otra orden";
+        echo "Y otra...";;
   verde) echo "El color es verde";;
   azul) echo "El color es azul";;
   *) echo "Color desconocido";;
