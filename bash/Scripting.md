@@ -66,6 +66,109 @@ echo "Hola, $nombre!"
   - `>` mayor que (lexicográficamente)
   - `<` menor que (lexicográficamente)
 
+###  Expresiones aritméticas
+
+Las expresiones aritméticas permiten realizar cálculos matemáticos directamente dentro de los scripts. Bash proporciona diferentes formas de evaluar expresiones aritméticas usando `$(())`, `let`, o incluso `expr`, aunque `$(())` es el método más común y moderno.
+
+#### Sintaxis básica
+
+`$(())` Permite evaluar una expresión aritmética. no necesita el signo `$` para las variables.
+
+#### Operadores aritméticos comunes
+
+- Suma `+`
+
+```bash
+# Asigna 5 a la variable resultado
+((resultado = 3 + 2))
+```
+
+- Resta `-`
+
+```bash
+# Asigna 3 a la variable resultado
+((resultado = 5 - 2))
+```
+
+- Multiplicación `*`
+
+```bash
+# Asigna 6 a la variable resultado
+((resultado = 3 * 2))
+```
+
+- División `/`
+
+```bash
+# Asigna 3 a la variable resultado
+((resultado = 6 / 2))
+```
+
+- Módulo `%`
+
+```bash
+# Asigna 1 a la variable resultado
+((resultado = 5 % 2))
+```
+
+- Incremento `++`
+  - Post-incremento: `contador++` usa el valor actual de `contador` y luego lo incrementa.
+  - Pre-incremento: `++contador` incrementa `contador` primero y luego usa su nuevo valor.
+
+- Decremento `--`
+  - Post-decremento: `contador--` usa el valor actual de `contador` y luego lo disminuye.
+  - Pre-decremento: `--contador` decrementa primero y luego usa el valor actualizado.
+
+### Operadores de comparación
+
+Las expresiones aritméticas también admiten operadores de comparación. Los resultados de estas comparaciones son `1` para verdadero y `0` para falso:
+
+- **Mayor que**: `>` (ejemplo: `((a > b))`)
+- **Menor que**: `<`
+- **Mayor o igual que**: `>=`
+- **Menor o igual que**: `<=`
+- **Igual a**: `==`
+- **Distinto de**: `!=`
+
+Ejemplo:
+
+```bash
+a=5
+b=10
+if ((a < b)); then
+  echo "$a es menor que $b"
+fi
+```
+
+Salida: `5 es menor que 10`
+
+### Uso con `let`
+
+Otra forma de realizar operaciones aritméticas es usando el comando `let`:
+
+```bash
+let resultado=5+3
+echo $resultado  # Imprime 8
+```
+
+Sin embargo, `$(())` es más moderno y flexible, por lo que suele ser preferido.
+
+### Uso con `expr` (menos común)
+
+```bash
+resultado=$(expr 5 + 3)
+echo $resultado  # Imprime 8
+```
+
+`expr` es una forma más antigua y limitada para realizar cálculos, por lo que es menos recomendada.
+
+### Resumen
+
+- **`$(())`** es la forma más común y preferida para hacer operaciones matemáticas.
+- Puedes usar operadores aritméticos (`+`, `-`, `*`, `/`, `%`, `++`, `--`) y operadores de comparación (`==`, `!=`, `>`, `<`, `>=`, `<=`).
+- Hay varias formas de incrementar y decrementar una variable con `++` y `--`.
+
+
 ### Condicional (if)
 
 - Sintaxis básica: `if condición; then acciones; fi`
@@ -100,7 +203,7 @@ else
 fi
 ```
 
-### [ versus [[
+#### [ versus [[
 
 Hay 2 comandos que se usan a menudo en las declaraciones if: `[` y `[[`:
 
@@ -129,6 +232,24 @@ Ejemplos:
 
 Con `man [` se puede aprender más.
 
+### Case
+
+- Sintaxis básica: `case valor in patron1) acciones1;; patron2) acciones2;; esac`
+- Compara el valor con los patrones y ejecuta las acciones correspondientes
+
+```bash
+echo "Ingrese un color (rojo, verde, azul): "
+read color
+case $color in
+  rojo) echo "El color es rojo";
+        echo "Ejecuta otra orden";
+        echo "Y otra...";;
+  verde) echo "El color es verde";;
+  azul) echo "El color es azul";;
+  *) echo "Color desconocido";;
+esac
+```
+
 ### Bucle for
 
 - Sintaxis básica: `for variable in lista; do acciones; done`
@@ -150,24 +271,6 @@ while [ $contador -lt 5 ]; do
   echo "Contador: $contador"
   ((contador++))
 done
-```
-
-### Bucle case
-
-- Sintaxis básica: `case valor in patron1) acciones1;; patron2) acciones2;; esac`
-- Compara el valor con los patrones y ejecuta las acciones correspondientes
-
-```bash
-echo "Ingrese un color (rojo, verde, azul): "
-read color
-case $color in
-  rojo) echo "El color es rojo";
-        echo "Ejecuta otra orden";
-        echo "Y otra...";;
-  verde) echo "El color es verde";;
-  azul) echo "El color es azul";;
-  *) echo "Color desconocido";;
-esac
 ```
 
 ### Bucle until
