@@ -8,3 +8,6 @@ En este directorio, una pequeña colección de scripts y cheatsheets para BASH.
 
 - [Awesome Cheatsheets > Bash](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh)
 - [Bash Cheat Sheet](https://github.com/RehanSaeed/Bash-Cheat-Sheet)
+- [¡Domina Shell Scripting paso a paso! 🚀🔥](https://blog.295devops.com/domina-shell-scripting-paso-a-paso)
+- [Automatizando tareas con Bash: Verificación del Sistema](https://blog.295devops.com/automatizando-tareas-con-bash-verificacion-del-sistema)
+- [¡Desplega tu aplicación con estilo usando Bash Scripting!](https://blog.295devops.com/desplega-tu-aplicacion-con-estilo-usando-bash-scripting)
