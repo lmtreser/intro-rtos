@@ -29,3 +29,5 @@ Para instalar módulos en placas que no cuentan con Wifi para conectar a Interne
 - Instalar mpremote con `pip install mpremote`
 - Instalar el módulo SSD1306 en la placa `mpremote mip install ssd1306`
 - Instalar el módulo AHT10 en la placa `mpremote mip install ("https://github.com/targetblank/micropython_ahtx0/blob/master/ahtx0.py")`
+
+Fuente: [Micropython: ¿Cómo instalar módulos con MIP?](https://www.profetolocka.com.ar/2023/07/15/micropython-como-instalar-modulos-con-mip/)
