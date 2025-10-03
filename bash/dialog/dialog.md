@@ -103,7 +103,7 @@ Ejecuta el subshell () y lo envia a dialog mediante un pipe.
 ## Opciones útiles
 
 | Opción                   | Descripción                        |
-|  | - |
+| ------------------------ | ---------------------------------- |
 | `--title "Título"`       | Título de la ventana               |
 | `--backtitle "Fondo"`    | Texto en el fondo superior         |
 | `--clear`                | Limpia la pantalla al terminar     |
